@@ -1,0 +1,13 @@
+*** Settings ***
+Library     RPA.Robocorp.Vault
+Library     RPA.OpenAI
+
+
+*** Tasks ***
+Create a text completion
+    ${secrets}    Get Secret    secret_name=OpenAI
+    Authorize To OpenAI    api_key=${secrets}[key]
+    ${completion}    Completion Create
+    ...    Write a tagline for an ice cream shop
+    ...    temperature=0.6
+    Log    ${completion}
