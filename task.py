@@ -119,7 +119,7 @@ $code_to_convert
 prompt_template_fix = """
 The code you provided do not run without errors. PLease look at the error below, and fix the code.
 Only reply with the fixed code, no other text please. No apologies or anything pointing out the
-issues. Just the code.
+issues. Just reply with the plain code without any extra words.
 
 $code_to_fix
 """
